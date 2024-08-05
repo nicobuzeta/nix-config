@@ -1,4 +1,4 @@
-{ config, pkgs, lib, home-manager, ... }:
+{ config, pkgs, lib, home-manager, inputs, ... }:
 
 let
   user = config.username;
@@ -16,6 +16,14 @@ in
   home-manager = {
     useGlobalPkgs = true;
     users.${user} = { pkgs, config, lib, ... }:{
+      imports = [
+        inputs.neovimConfig.homeModule
+      ];
+
+      neovimConfig = {
+        enable = true;
+      };
+
       home = {
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix {};
