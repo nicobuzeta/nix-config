@@ -2,6 +2,7 @@
 
 with pkgs; [
   home-manager
+  # inputs.nv.packages.${system}.default
   # # General packages for development and system management
   # act
   # alacritty

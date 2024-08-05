@@ -8,14 +8,14 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvimConfig.url = "path:./nvim";
+    neovimConfig.url ="path:./neovim";
   };
 
-  outputs = { self, darwin, home-manager, nixpkgs, nvimConfig } @inputs:
+  outputs = { self, darwin, home-manager, nixpkgs, ... } @inputs:
     {
       darwinConfigurations = {
         "Nicolass-MacBook-Air" = darwin.lib.darwinSystem {
-          specialArgs = inputs;
+          specialArgs = { inherit inputs; };
           modules = [
             home-manager.darwinModules.home-manager
             ./hosts/darwin
