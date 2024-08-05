@@ -42,6 +42,6 @@ let user = "nicobuzeta"; in
 
   # Load configuration that is shared across systems
   environment.systemPackages = with pkgs; [
-    inputs.nv.packages.${system}.default
+    inputs.neovimConfig.packages.${system}.default
   ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
 }
