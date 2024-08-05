@@ -17,10 +17,10 @@ in
     useGlobalPkgs = true;
     users.${user} = { pkgs, config, lib, ... }:{
       imports = [
-        inputs.neovimConfig.homeModule
+        inputs.nixCats.homeModule
       ];
 
-      neovimConfig = {
+      nixCats = {
         enable = true;
       };
 
