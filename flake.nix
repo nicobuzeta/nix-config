@@ -8,10 +8,10 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixCats.url = "path:./nixCats";
+    nvimConfig.url = "path:./nvim";
   };
 
-  outputs = { self, darwin, home-manager, nixpkgs, nixCats } @inputs:
+  outputs = { self, darwin, home-manager, nixpkgs, nvimConfig } @inputs:
     {
       darwinConfigurations = {
         "Nicolass-MacBook-Air" = darwin.lib.darwinSystem {

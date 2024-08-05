@@ -1,4 +1,4 @@
-{ config, pkgs, nixCats, ... }:
+{ config, pkgs, ... }:
 
 let user = "nicobuzeta"; in
 

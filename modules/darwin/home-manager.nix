@@ -1,4 +1,4 @@
-{ config, pkgs, lib, home-manager, nixCats, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 
 let
   user = config.username;
@@ -16,18 +16,10 @@ in
   home-manager = {
     useGlobalPkgs = true;
     users.${user} = { pkgs, config, lib, ... }:{
-      imports = [
-        nixCats.homeModule
-      ];
       home = {
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix {};
         stateVersion = "23.11";
-      };
-
-      nixCats = {
-        enable = true;
-        packageNames = [ "nixCats" ];
       };
 
       programs = {
