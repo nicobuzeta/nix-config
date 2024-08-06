@@ -29,6 +29,7 @@
           {
             home.username = "nicobuzeta";
             home.homeDirectory = "/home/nicobuzeta";
+            stateVersion = "24.05";
           }
         ];
       };
