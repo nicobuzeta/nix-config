@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./features/home-manager
     ./features/neovim
   ];
 }

@@ -21,5 +21,16 @@
           ];
         };
       };
+
+      homeConfigurations."nicobuzeta" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [
+          ./modules/shared/home-manager.nix
+          {
+            home.username = "nicobuzeta";
+            home.homeDirectory = "/home/nicobuzeta";
+          }
+        ];
+      };
     };
 }
