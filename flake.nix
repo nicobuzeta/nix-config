@@ -8,7 +8,6 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixCats.url = "path:./nvim";
   };
 
   outputs = { self, darwin, home-manager, nixpkgs, ... } @inputs:

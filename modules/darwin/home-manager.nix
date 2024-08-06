@@ -15,23 +15,17 @@ in
   # Enable home-manager
   home-manager = {
     useGlobalPkgs = true;
-    users.${user} = { pkgs, config, lib, ... }:{
-      imports = [
-        inputs.nixCats.homeModule
-      ];
-
-      nixCats = {
-        enable = true;
-      };
-
+    users.${user} = { pkgs, config, lib, ... }: {
       home = {
         enableNixpkgsReleaseCheck = false;
-        packages = pkgs.callPackage ./packages.nix {};
+        packages = pkgs.callPackage ./packages.nix { };
         stateVersion = "23.11";
       };
+      imports = [
+        ../shared/home-manager.nix
+      ];
 
-      programs = {
-      } // import ../shared/home-manager.nix { inherit config pkgs lib; };
+      # programs = { } // import ../shared/home-manager.nix { inherit config pkgs lib; };
 
 
       # Marked broken Oct 20, 2022 check later to remove this
