@@ -6,7 +6,11 @@
     extraPackages = with pkgs; [
       fd
       ripgrep
+      clang-tools
     ];
+    withRuby = true;
+    withNodeJs = true;
+    withPython3 = true;
     viAlias = true;
   };
 
@@ -16,6 +20,6 @@
   # };
   xdg.configFile.nvim = {
     enable = true;
-    source = config.lib.file.mkOutOfStoreSymlink "/Users/nicobuzeta/new-nix/modules/shared/features/neovim/nvimConfig/nvim";
+    source = config.lib.file.mkOutOfStoreSymlink "/home/nicobuzeta/nix-config/modules/shared/features/neovim/nvimConfig/nvim";
   };
 }

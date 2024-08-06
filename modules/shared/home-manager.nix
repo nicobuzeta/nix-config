@@ -4,5 +4,7 @@
   imports = [
     ./features/home-manager
     ./features/neovim
+    ./features/direnv
+    ./features/zsh
   ];
 }

@@ -219,6 +219,8 @@ return {
           end,
         },
       }
+
+      require('lspconfig')['clangd'].setup({})
     end,
   },
 }
