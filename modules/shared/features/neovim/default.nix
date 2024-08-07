@@ -9,6 +9,8 @@
       clang-tools
       nil
       nixfmt-rfc-style
+      lazygit
+
     ];
     withRuby = true;
     withNodeJs = true;
