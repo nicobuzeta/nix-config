@@ -8,6 +8,7 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs =
@@ -15,9 +16,19 @@
       self,
       darwin,
       home-manager,
+      flake-utils,
       nixpkgs,
       ...
     }@inputs:
+    let
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+    in
     {
       darwinConfigurations = {
         "Nicolass-MacBook-Air" = darwin.lib.darwinSystem {
@@ -31,16 +42,24 @@
         };
       };
 
-      homeConfigurations."nicobuzeta" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."aarch64-linux";
-        modules = [
-          ./modules/shared/home-manager.nix
-          {
-            home.username = "nicobuzeta";
-            home.homeDirectory = "/home/nicobuzeta";
-            home.stateVersion = "24.05";
-          }
-        ];
-      };
+      packages = forAllSystems (system: {
+        homeConfigurations."nicobuzeta" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit system;
+          };
+          modules = [
+            ./modules/shared/home-manager.nix
+            {
+              home = {
+                username = "nicobuzeta";
+                homeDirectory = "/home/nicobuzeta";
+                stateVersion = "24.05";
+              };
+            }
+          ];
+        };
+      });
     };
 }
