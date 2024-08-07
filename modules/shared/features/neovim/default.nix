@@ -22,6 +22,6 @@
   # };
   xdg.configFile.nvim = {
     enable = true;
-    source = config.lib.file.mkOutOfStoreSymlink "/home/nicobuzeta/nix-config/modules/shared/features/neovim/nvimConfig/nvim";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-config/modules/shared/features/neovim/nvim";
   };
 }
