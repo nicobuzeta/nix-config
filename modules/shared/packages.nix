@@ -95,6 +95,6 @@ with pkgs; [
   #
   # # Python packages
   # black
-  # python39
+  python3
   # python39Packages.virtualenv
 ]
