@@ -221,6 +221,7 @@ return {
       }
 
       require('lspconfig')['clangd'].setup({})
+      require('lspconfig')['nil_ls'].setup({})
     end,
   },
 }

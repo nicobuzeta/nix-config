@@ -7,6 +7,8 @@
       fd
       ripgrep
       clang-tools
+      nil
+      nixfmt-rfc-style
     ];
     withRuby = true;
     withNodeJs = true;

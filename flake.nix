@@ -10,11 +10,20 @@
     };
   };
 
-  outputs = { self, darwin, home-manager, nixpkgs, ... } @inputs:
+  outputs =
+    {
+      self,
+      darwin,
+      home-manager,
+      nixpkgs,
+      ...
+    }@inputs:
     {
       darwinConfigurations = {
         "Nicolass-MacBook-Air" = darwin.lib.darwinSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             home-manager.darwinModules.home-manager
             ./hosts/darwin
@@ -23,7 +32,7 @@
       };
 
       homeConfigurations."nicobuzeta" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        pkgs = nixpkgs.legacyPackages."aarch64-linux";
         modules = [
           ./modules/shared/home-manager.nix
           {
