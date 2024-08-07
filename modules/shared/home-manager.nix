@@ -12,6 +12,7 @@
     ./features/direnv
     ./features/zsh
     ./features/btop
+    ./features/bash
   ];
 
   fonts.fontconfig.enable = true;
