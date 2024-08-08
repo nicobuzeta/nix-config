@@ -13,6 +13,7 @@
     ./features/zsh
     ./features/btop
     ./features/bash
+    ./features/fish
   ];
 
   fonts.fontconfig.enable = true;
