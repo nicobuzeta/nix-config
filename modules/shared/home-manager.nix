@@ -14,6 +14,7 @@
     ./features/btop
     ./features/bash
     ./features/fish
+    ./features/tmux
   ];
 
   fonts.fontconfig.enable = true;
