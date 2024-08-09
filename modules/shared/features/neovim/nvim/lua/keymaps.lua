@@ -47,3 +47,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Custom keybinds
 vim.keymap.set('n', '<leader>qq', '<cmd>quitall<cr>', { desc = 'Quit All' })
+vim.keymap.set('n', '<leader>xh', vim.diagnostic.open_float, { desc = 'Open Diagnostics' })
