@@ -2,7 +2,7 @@
 {
   programs.alacritty = {
     enable = true;
-    settings = ''
+    settings = builtins.fromTOML ''
       [font.normal]
       family = "JetBrainsMono Nerd Font Mono"
       style = "Regular"
