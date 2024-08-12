@@ -41,5 +41,6 @@ let user = "nicobuzeta"; in
 
   # Load configuration that is shared across systems
   environment.systemPackages = with pkgs; [
-  ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
+    teams
+  ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
 }
