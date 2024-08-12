@@ -15,6 +15,7 @@
     ./features/bash
     ./features/fish
     ./features/tmux
+    ./features/lazygit
   ];
 
   fonts.fontconfig.enable = true;
