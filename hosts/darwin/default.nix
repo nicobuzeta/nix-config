@@ -1,15 +1,20 @@
 { config, pkgs, ... }:
 
-let user = "nicobuzeta"; in
+let
+  user = "nicobuzeta";
+in
 
 {
   imports = [
-    ({ lib, ... }: {
-      options.username = lib.mkOption {
-        type = lib.types.str;
-        default = user;
-      };
-    })
+    (
+      { lib, ... }:
+      {
+        options.username = lib.mkOption {
+          type = lib.types.str;
+          default = user;
+        };
+      }
+    )
     ../../modules/darwin/home-manager.nix
     ../../modules/shared
     ../../modules/shared/cachix
@@ -21,12 +26,19 @@ let user = "nicobuzeta"; in
   # Setup user, packages, programs
   nix = {
     package = pkgs.nix;
-    settings.trusted-users = [ "@admin" "${user}" ];
+    settings.trusted-users = [
+      "@admin"
+      "${user}"
+    ];
 
     gc = {
       user = "root";
       automatic = true;
-      interval = { Weekday = 0; Hour = 2; Minute = 0; };
+      interval = {
+        Weekday = 0;
+        Hour = 2;
+        Minute = 0;
+      };
       options = "--delete-older-than 30d";
     };
 
@@ -39,8 +51,11 @@ let user = "nicobuzeta"; in
   # Turn off NIX_PATH warnings now that we're using flakes
   system.checks.verifyNixPath = false;
 
+  # Add ability to used TouchID for sudo authentication
+  security.pam.enableSudoTouchIdAuth = true;
+
   # Load configuration that is shared across systems
-  environment.systemPackages = with pkgs; [
-    teams
-  ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
+  environment.systemPackages =
+    with pkgs;
+    [ teams ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
 }
