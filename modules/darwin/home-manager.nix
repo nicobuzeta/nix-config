@@ -35,7 +35,10 @@ in
           packages = pkgs.callPackage ./packages.nix { };
           stateVersion = "23.11";
         };
-        imports = [ ../shared/home-manager.nix ];
+        imports = [
+          ./features/alacritty
+          ../shared/home-manager.nix
+        ];
 
         # programs = { } // import ../shared/home-manager.nix { inherit config pkgs lib; };
 

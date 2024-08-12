@@ -15,7 +15,6 @@
     ./features/bash
     ./features/fish
     ./features/tmux
-    ./features/alacritty
   ];
 
   fonts.fontconfig.enable = true;

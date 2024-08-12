@@ -49,9 +49,7 @@
             inherit inputs;
             inherit system;
           };
-          modules = [
-            ./hosts/arch
-          ];
+          modules = [ ./hosts/arch ];
         };
       });
     };
