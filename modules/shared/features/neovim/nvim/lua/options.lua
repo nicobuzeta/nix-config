@@ -68,4 +68,10 @@ vim.opt.number = true;
 -- Use relative numbers around
 vim.opt.relativenumber = true
 
+-- Use 2 spaces as tabs by default
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.bo.softtabstop = 2
+
 -- vim: ts=2 sts=2 sw=2 et
