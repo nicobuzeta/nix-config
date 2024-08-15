@@ -4,4 +4,5 @@ with pkgs;
 [
   nixfmt-rfc-style
   clang-tools
+  telegram-desktop
 ]
