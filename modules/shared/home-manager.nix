@@ -16,6 +16,7 @@
     ./features/fish
     ./features/tmux
     ./features/lazygit
+    ./features/zathura
   ];
 
   fonts.fontconfig.enable = true;
