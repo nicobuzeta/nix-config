@@ -17,6 +17,7 @@
     ./features/tmux
     ./features/lazygit
     ./features/zathura
+    ./features/ranger
   ];
 
   fonts.fontconfig.enable = true;
