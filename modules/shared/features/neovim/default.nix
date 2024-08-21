@@ -15,6 +15,7 @@
     withNodeJs = true;
     withPython3 = true;
     viAlias = true;
+    defaultEditor = true;
   };
 
   # xdg.configFile = {
