@@ -12,8 +12,8 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '<leader>0', ':Neotree reveal<CR>', desc = 'Focus Neotree on current file' },
-    { '<leader>E', ':Neotree action=focus toggle<CR>', desc = 'Toggle Neotree' },
+    { '<leader>0', '<cmd>silent Neotree reveal<CR>', desc = 'Focus Neotree on current file' },
+    { '<leader>E', '<cmd>silent Neotree action=focus toggle<CR>', desc = 'Toggle Neotree' },
   },
   -- Broken Lazy with Neotree
   lazy = false,
