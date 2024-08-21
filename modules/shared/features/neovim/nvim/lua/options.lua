@@ -59,9 +59,6 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- Hide command line
-vim.o.cmdheight = 0
-
 -- Show actual line number for current line
 vim.opt.number = true;
 
