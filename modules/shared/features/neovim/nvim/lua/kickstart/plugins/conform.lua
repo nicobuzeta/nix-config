@@ -28,6 +28,8 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         nix = { 'nixfmt' },
+        javascript = { 'prettierd' },
+        typescript = { 'prettierd' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

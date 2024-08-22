@@ -10,6 +10,7 @@
       nil
       nixfmt-rfc-style
       lazygit
+      prettierd
     ];
     withRuby = true;
     withNodeJs = true;
