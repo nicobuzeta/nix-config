@@ -58,4 +58,9 @@ in
   environment.systemPackages =
     with pkgs;
     [ teams ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
+
+  environment.shells = [ pkgs.fish ];
+
+  system.keyboard.enableKeyMapping = true;
+  system.keyboard.remapCapsLockToControl = true;
 }
