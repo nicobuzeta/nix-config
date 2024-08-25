@@ -9,7 +9,7 @@ return {
         jump_prev = '<C-k>',
         jump_next = '<C-j>',
         accept = '<M-y>',
-        open = '<leader>co',
+        -- open = '<leader>co',
       },
     },
   },
