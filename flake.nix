@@ -46,6 +46,8 @@
         "Nicolass-MacBook-Air" = darwin.lib.darwinSystem {
           specialArgs = {
             inherit inputs;
+            inherit homebrew-core;
+            inherit homebrew-cask;
           };
           modules = [
             home-manager.darwinModules.home-manager

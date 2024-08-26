@@ -19,6 +19,7 @@ in
     ../../modules/shared
     ../../modules/shared/cachix
     ../../modules/darwin/homebrew.nix
+    ../../modules/darwin/brews.nix
   ];
 
   # Auto upgrade nix package and the daemon service.

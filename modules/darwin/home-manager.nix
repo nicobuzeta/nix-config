@@ -34,6 +34,7 @@ in
           enableNixpkgsReleaseCheck = false;
           packages = pkgs.callPackage ./packages.nix { };
           stateVersion = "23.11";
+          sessionPath = [ "/opt/homebrew/bin" ];
         };
         imports = [
           ./features/alacritty
