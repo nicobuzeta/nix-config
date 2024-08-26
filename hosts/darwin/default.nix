@@ -54,12 +54,13 @@ in
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
 
+  programs.fish.enable = true;
+  environment.shells = with pkgs; [ fish ];
+
   # Load configuration that is shared across systems
   environment.systemPackages =
     with pkgs;
     [ teams ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
-
-  environment.shells = [ pkgs.fish ];
 
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToControl = true;
