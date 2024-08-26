@@ -18,6 +18,7 @@ in
     ../../modules/darwin/home-manager.nix
     ../../modules/shared
     ../../modules/shared/cachix
+    ../../modules/darwin/homebrew.nix
   ];
 
   # Auto upgrade nix package and the daemon service.
