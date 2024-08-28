@@ -32,7 +32,7 @@ in
       {
         home = {
           enableNixpkgsReleaseCheck = false;
-          packages = pkgs.callPackage ./packages.nix { };
+          packages = pkgs.callPackage ./userPackages.nix { };
           stateVersion = "23.11";
           sessionPath = [ "/opt/homebrew/bin" ];
         };

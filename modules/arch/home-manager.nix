@@ -6,7 +6,7 @@ in
 {
   imports = [ ../shared/home-manager.nix ];
   home = {
-    packages = pkgs.callPackage ./packages.nix { };
+    packages = pkgs.callPackage ./userPackages.nix { };
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = "24.05";

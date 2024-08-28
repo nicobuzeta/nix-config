@@ -6,6 +6,5 @@ with pkgs;
   clang-tools
   telegram-desktop
   pypy3
-  zotero_7
   act
 ]

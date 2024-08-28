@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   user = "nicobuzeta";
@@ -26,4 +26,6 @@ in
     # Turn this on to make command line easier
     settings.experimental-features = "nix-command flakes";
   };
+
+  environment.systemPackages = import ../../modules/arch/systemPackages.nix { inherit pkgs; };
 }

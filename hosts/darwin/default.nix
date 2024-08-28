@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   user = "nicobuzeta";
@@ -60,9 +60,7 @@ in
   # environment.shells = with pkgs; [ fish ];
 
   # Load configuration that is shared across systems
-  environment.systemPackages =
-    with pkgs;
-    [ teams ] ++ (import ../../modules/shared/systemPackages.nix { inherit pkgs; });
+  environment.systemPackages = import ../../modules/darwin/systemPackages.nix { inherit pkgs; };
 
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToControl = true;
