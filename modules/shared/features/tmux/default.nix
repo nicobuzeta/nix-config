@@ -16,6 +16,8 @@
       bind v split-window -h
       unbind '"'
       unbind '%'
+
+      set -s set-clipboard on
     '';
   };
 }
