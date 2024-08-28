@@ -56,8 +56,8 @@ in
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
 
-  programs.fish.enable = true;
-  environment.shells = with pkgs; [ fish ];
+  # programs.fish.enable = true;
+  # environment.shells = with pkgs; [ fish ];
 
   # Load configuration that is shared across systems
   environment.systemPackages =
