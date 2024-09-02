@@ -4,6 +4,10 @@
   homebrew = {
     enable = true;
     brews = [ "cowsay" ];
-    casks = [ ];
+    casks = [
+      "microsoft-teams"
+      "zotero"
+      "whatsapp"
+    ];
   };
 }
