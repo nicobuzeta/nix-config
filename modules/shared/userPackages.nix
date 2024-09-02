@@ -7,4 +7,5 @@ with pkgs;
   telegram-desktop
   pypy3
   act
+  mosh
 ]
