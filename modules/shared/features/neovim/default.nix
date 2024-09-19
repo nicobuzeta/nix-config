@@ -11,6 +11,11 @@
       nixfmt-rfc-style
       lazygit
       prettierd
+      ueberzugpp
+    ];
+    extraPython3Packages = with pkgs.python3Packages; [
+      pynvim
+      jupyter_client
     ];
     withRuby = true;
     withNodeJs = true;
