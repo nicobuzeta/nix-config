@@ -12,11 +12,14 @@
       lazygit
       prettierd
       ueberzugpp
+      imagemagick
     ];
-    extraPython3Packages = with pkgs.python3Packages; [
-      pynvim
-      jupyter_client
-    ];
+    extraPython3Packages =
+      ps: with ps; [
+        pynvim
+        jupyter_client
+      ];
+    extraLuaPackages = ps: with ps; [ magick ];
     withRuby = true;
     withNodeJs = true;
     withPython3 = true;

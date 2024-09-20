@@ -2,8 +2,6 @@
 
 with pkgs;
 [
-  gdb
-  rr
   nixfmt-rfc-style
   clang-tools
   telegram-desktop
@@ -11,4 +9,5 @@ with pkgs;
   act
   mosh
   dig
+  texliveFull
 ]
