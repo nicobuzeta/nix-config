@@ -8,6 +8,7 @@
       "microsoft-teams"
       "zotero"
       "whatsapp"
+      "aldente"
     ];
   };
 }
