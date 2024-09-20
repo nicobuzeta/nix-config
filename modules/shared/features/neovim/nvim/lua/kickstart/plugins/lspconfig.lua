@@ -228,6 +228,7 @@ return {
       require('lspconfig')['clangd'].setup {} -- C/C++ language server
       require('lspconfig')['terraformls'].setup {} -- Terraform language server
       require('lspconfig')['nil_ls'].setup {} -- Nix language server
+      require('lspconfig')['pyright'].setup {} -- Nix language server
     end,
   },
 }

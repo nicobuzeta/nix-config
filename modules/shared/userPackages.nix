@@ -10,4 +10,5 @@ with pkgs;
   mosh
   dig
   texliveFull
+  ueberzugpp
 ]
