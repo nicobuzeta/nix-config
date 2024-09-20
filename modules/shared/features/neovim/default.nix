@@ -17,8 +17,9 @@
     ];
     extraPython3Packages =
       ps: with ps; [
-        pynvim
-        jupyter_client
+        pynvim # Molten
+        jupyter_client # Molten
+        jupytext
       ];
     extraLuaPackages = ps: with ps; [ magick ];
     withRuby = true;
