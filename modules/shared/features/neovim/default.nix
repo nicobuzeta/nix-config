@@ -13,6 +13,7 @@
       prettierd
       ueberzugpp
       imagemagick
+      pyright
     ];
     extraPython3Packages =
       ps: with ps; [
