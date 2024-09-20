@@ -18,6 +18,9 @@
       unbind '%'
 
       set -s set-clipboard on
+
+      # image.nvim
+      set -gq allow-passthrough on
     '';
   };
 }
