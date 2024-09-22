@@ -18,7 +18,6 @@
     ./features/lazygit
     ./features/zathura
     ./features/ranger
-    ./features/kitty
   ];
 
   fonts.fontconfig.enable = true;

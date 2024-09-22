@@ -38,6 +38,7 @@ in
         };
         imports = [
           ./features/alacritty
+          ./features/kitty
           ../shared/home-manager.nix
         ];
 
