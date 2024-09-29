@@ -1,6 +1,6 @@
 require('quarto').activate()
 
-vim.g.molten_output_win_max_height = 12
+vim.g.molten_output_win_max_height = 20
 
 -- I find auto open annoying, keep in mind setting this option will require setting
 -- a keybind for `:noautocmd MoltenEnterOutput` to open the output again

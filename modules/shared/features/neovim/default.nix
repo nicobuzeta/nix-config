@@ -19,7 +19,8 @@
       ps: with ps; [
         pynvim # Molten
         jupyter_client # Molten
-        jupytext
+        jupytext # Molten open ipynb
+        pillow # Molten open image
       ];
     extraLuaPackages = ps: with ps; [ magick ];
     withRuby = true;

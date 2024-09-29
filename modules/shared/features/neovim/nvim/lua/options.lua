@@ -60,7 +60,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Show actual line number for current line
-vim.opt.number = true;
+vim.opt.number = true
 
 -- Use relative numbers around
 vim.opt.relativenumber = true
@@ -70,5 +70,10 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
+
+if vim.env.NVIM_PYTHON3_HOST_PROG then
+  print 'XD'
+  vim.g.python3_host_prog = vim.env.NVIM_PYTHON3_HOST_PROG
+end
 
 -- vim: ts=2 sts=2 sw=2 et
