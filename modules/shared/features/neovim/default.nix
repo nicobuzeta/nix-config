@@ -6,6 +6,7 @@
     extraPackages = with pkgs; [
       fd
       ripgrep
+      clang
       clang-tools
       nil
       nixfmt-rfc-style
