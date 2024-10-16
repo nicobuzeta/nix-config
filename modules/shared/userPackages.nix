@@ -11,4 +11,6 @@ with pkgs;
   dig
   texliveFull
   ueberzugpp
+  go
+  gdown
 ]
