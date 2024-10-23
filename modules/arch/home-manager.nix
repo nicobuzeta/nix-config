@@ -4,15 +4,18 @@ let
   user = config.username;
 in
 {
-  imports = [ ../shared/home-manager.nix ];
+  imports = [
+    ../shared/home-manager.nix
+    ../shared/default.nix
+  ];
   home = {
     packages = pkgs.callPackage ./userPackages.nix { };
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = "24.05";
+    sessionPath = [ "/opt/cuda/bin" ];
     sessionVariables = {
       MOZ_DISABLE_RDD_SANDBOX = "1";
-      LIBVA_DRIVER_NAME = "nvidia";
       XDG_SESSION_TYPE = "wayland";
       QT_QPA_PLATFORM = "wayland";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
