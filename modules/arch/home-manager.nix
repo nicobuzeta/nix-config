@@ -23,6 +23,7 @@ in
       XDG_SESSION_DESKTOP = "sway";
       MOZ_ENABLE_WAYLAND = 1;
       MOZ_USE_XINPUT2 = 1;
+      WLR_RENDERER = "vulkan";
     };
   };
 }

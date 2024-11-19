@@ -15,6 +15,8 @@
       ueberzugpp
       imagemagick
       pyright
+      black
+      isort
     ];
     extraPython3Packages =
       ps: with ps; [
