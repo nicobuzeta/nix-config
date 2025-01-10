@@ -13,7 +13,10 @@ in
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = "24.05";
-    sessionPath = [ "/opt/cuda/bin" ];
+    sessionPath = [
+      "/opt/cuda/bin"
+      "home/${user}/.local/bin"
+    ];
     sessionVariables = {
       MOZ_DISABLE_RDD_SANDBOX = "1";
       XDG_SESSION_TYPE = "wayland";

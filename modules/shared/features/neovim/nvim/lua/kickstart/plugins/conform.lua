@@ -29,6 +29,7 @@ return {
         lua = { 'stylua' },
         nix = { 'nixfmt' },
         javascript = { 'prettierd' },
+        javascriptreact = { 'prettierd' },
         typescript = { 'prettierd' },
         json = { 'prettierd' },
         jsonc = { 'prettierd' },
