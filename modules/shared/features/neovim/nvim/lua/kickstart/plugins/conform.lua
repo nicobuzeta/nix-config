@@ -31,6 +31,7 @@ return {
         javascript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         typescript = { 'prettierd' },
+        typescriptreact = { 'prettierd' },
         json = { 'prettierd' },
         jsonc = { 'prettierd' },
         python = { 'isort', 'black' },

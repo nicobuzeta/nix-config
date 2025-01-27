@@ -17,6 +17,7 @@
       pyright
       black
       isort
+      eslint_d
     ];
     extraPython3Packages =
       ps: with ps; [
