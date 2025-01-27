@@ -13,4 +13,5 @@ with pkgs;
   ueberzugpp
   go
   gdown
+  pnpm
 ]
